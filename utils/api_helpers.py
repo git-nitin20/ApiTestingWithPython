@@ -10,7 +10,6 @@ def get(endpoint, headers=None):
 
 def post(endpoint, data, headers=None):
     headers = headers or {}
-    # headers.update({"Authorization": f"Bearer {API_TOKEN}"})
     response = requests.post(f"{BASE_URL}{endpoint}", json=data, headers=headers)
     return response
 
