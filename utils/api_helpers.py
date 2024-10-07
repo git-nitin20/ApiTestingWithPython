@@ -12,7 +12,3 @@ def post(endpoint, data, headers=None):
     headers = headers or {}
     response = requests.post(f"{BASE_URL}{endpoint}", json=data, headers=headers)
     return response
-
-def get_token(endpoint, data, headers):
-    res = post(endpoint, data, headers)
-    return res
