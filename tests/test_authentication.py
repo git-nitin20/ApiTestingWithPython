@@ -8,7 +8,7 @@ def test_generate_token_success():
     headers = {"Content-Type": "application/json"}
     res = post(endpoint, payload, headers)
     assert res.status_code == 200
-    assert res.json()["token"] is not None
+    assert res.json()["token"] != "Bad credentials"
 
 
 @pytest.mark.smoke
